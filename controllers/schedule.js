@@ -33,9 +33,10 @@ const add = function(req, res, next){
 
     try {
         newSchedule.add().then(function() {
-            new Schedule({}).getBy(params.customerId, params.date).then(function(scheduleList) {
+            //on ADD not showing Schedule now so comment getBy()
+            /*new Schedule({}).getBy(params.customerId, params.date).then(function(scheduleList) {
                 res.send(scheduleList);
-            });
+            });*/
 		});
     } catch (err) {
 			console.log("Error: ", err);
